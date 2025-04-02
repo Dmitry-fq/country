@@ -1,7 +1,7 @@
 package guru.qa.service;
 
 import guru.qa.domain.Country;
-import guru.qa.dto.CountryJson;
+import guru.qa.domain.graphql.CountryGql;
 
 import java.util.List;
 
@@ -9,7 +9,13 @@ public interface CountryService {
 
     List<Country> allCountries();
 
-    CountryJson addCountry(String countryName, String countryCode);
+    List<CountryGql> allCountriesGql();
 
-    CountryJson editCountryName(String countryCode, String countryName);
+    Country addCountry(String countryName, String countryCode);
+
+    CountryGql addCountryGql(String countryName, String countryCode);
+
+    Country editCountryName(String countryCode, String countryName);
+
+    CountryGql editCountryNameGqlByCountryCode(String countryCode, String countryName);
 }

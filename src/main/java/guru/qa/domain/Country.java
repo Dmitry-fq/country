@@ -1,8 +1,10 @@
 package guru.qa.domain;
 
-public record Country(
-        String countryName,
+import java.util.UUID;
 
+public record Country(
+        UUID id,
+        String countryName,
         String countryCode
 ) {
 }

@@ -1,6 +1,6 @@
 package guru.qa.data;
 
-import guru.qa.dto.CountryJson;
+import guru.qa.domain.graphql.CountryGql;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -51,8 +51,9 @@ public class CountryEntity {
         return this instanceof HibernateProxy ? ((HibernateProxy) this).getHibernateLazyInitializer().getPersistentClass().hashCode() : getClass().hashCode();
     }
 
-    public CountryJson toJson() {
-        return new CountryJson(
+    public CountryGql toGql() {
+        return new CountryGql(
+                id,
                 countryName,
                 countryCode
         );
