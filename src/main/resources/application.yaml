@@ -42,3 +42,5 @@ server:
 logging:
   level:
     org.flywaydb: DEBUG
+country:
+  base-uri: http://127.0.0.1:8282
